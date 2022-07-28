@@ -10,26 +10,26 @@
 <body>
   <div class="containerBacco">
     <header>
-      <a href="/">
+      <a href="#">
         <img src="./assets/img/logo.png" alt="Logo da Bacco">
       </a>
       <nav class="nav">
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a href="#">Home</a>
           </li>
           <li>
-            <a href="/">Sobre</a>
+            <a href="#">Sobre</a>
           </li>
           <li>
-            <a href="">Caminho do Vinho</a>
+            <a href="#">Caminho do Vinho</a>
           </li>
           <li>
             <a href="https://bacco.app/shop">Web Store</a>
           </li>
         </ul>
       </nav>
-      <a href="/">Contato</a>
+      <a href="#">Contato</a>
     </header>
             <!-- INICIO MENU MOBILE -->
             <div class="b-menu-mobile-img">
@@ -38,7 +38,7 @@
                   <span></span>
                   <span></span>
               </a>
-              <a href="index.html">
+              <a href="#">
                   <img src="./assets/img/logo.png" alt="Logo da Cidauto Store">
               </a>
           </div>
@@ -52,13 +52,13 @@
                           <div class="b-menu-mobile">
                               <ul class="navbar-nav">
                                   <li class="nav-item">
-                                      <a class="nav-link js-scroll-trigger" href="/">Home</a>
+                                      <a class="nav-link js-scroll-trigger" href="#">Home</a>
                                   </li>
                                   <li class="nav-item">
-                                      <a class="nav-link js-scroll-trigger" href="/">Sobre</a>
+                                      <a class="nav-link js-scroll-trigger" href="#">Sobre</a>
                                   </li>
                                   <li class="nav-item">
-                                      <a class="nav-link js-scroll-trigger" href="/">Caminho do Vinho</a>
+                                      <a class="nav-link js-scroll-trigger" href="#">Caminho do Vinho</a>
                                   </li>   
                                   <li class="nav-item">
                                       <a class="nav-link js-scroll-trigger" href="https://bacco.app/shop">Web Store</a>
@@ -77,7 +77,7 @@
         <p>Conheça a primeira plataforma com adega autônoma</p>
         <p>do Brasil, clube exclusivo & investimento</p>
         <p> em safras de vinho</p>
-        <a href="/">Saber Mais</a>
+        <a href="#">Saber Mais</a>
       </div>
     </section>
     <section class="sectionTwo">
@@ -134,7 +134,7 @@
     <footer>
       <ul>
         <li>
-          <a href="">contato@bacco.app</a>
+          <span>contato@bacco.app</span>
         </li>
         <li>
           <img src="./assets/img/logo.png" alt="Logo da Bacco">
@@ -162,7 +162,7 @@
 
       const list = document.querySelectorAll('.nav>ul>li>a')
       list.forEach((item) => {
-        item.addEventListener('click', handleClick)
+        //item.addEventListener('click', handleClick)
       })
 
       function handleClick(e){

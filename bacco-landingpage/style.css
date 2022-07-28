@@ -26,6 +26,10 @@
   font-family: 'Filson Pro', sans-serif;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 a,ul,li{
   list-style: none;
   text-decoration: none;

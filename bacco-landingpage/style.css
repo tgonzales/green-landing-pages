@@ -228,13 +228,11 @@ a {
 .containerBacco{
   margin:0 auto;
   width: 100%;
-  max-width: 1440px;
 }
 
 header{
   height: 80px;
   width: 100%;
-  max-width: 1440px;
   padding-left: 70px;
   padding-right: 70px;
   display: flex;
@@ -302,6 +300,7 @@ header>nav>ul>li .active:before{
   max-width: 100%;
   padding: 10px;
   background: url(./assets/img/sectionOne.png) no-repeat center center;
+  background-size: cover;
 }
 
 .sectionTwo{
@@ -309,6 +308,7 @@ header>nav>ul>li .active:before{
   width: 100%;
   max-width: 100%;
   position: relative;
+  justify-content: center;
   display: flex;
   align-items: center;
   padding-left: 115px;
@@ -324,6 +324,7 @@ header>nav>ul>li .active:before{
   padding: 10px;
   flex-direction: column;
   background: url(./assets/img/sectionThree.png) no-repeat center center;
+  background-size: cover;
 }
 
 
@@ -334,12 +335,12 @@ header>nav>ul>li .active:before{
   max-width: 100%;
   padding: 10px;
   background: url(./assets/img/sectionFour.png) no-repeat center center;
+  background-size: cover;
   border-bottom: 5px solid #61284B;
 }
 
 .baccoServices>ul>li{
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 24px;
 }

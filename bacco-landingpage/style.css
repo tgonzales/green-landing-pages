@@ -1,0 +1,609 @@
+@font-face {
+  font-family: 'Filson Pro';
+  src: url('./assets/fonts/FilsonProLight.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Filson Pro';
+  src: url('./assets/fonts/FilsonPro-Regular.woff2') format('woff2'),
+      url('./assets/fonts/FilsonPro-Regular.woff') format('woff'),
+      url('./assets/fonts/FilsonPro-Regular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Filson Pro';
+  src: url('./assets/fonts/FilsonProBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Filson Pro', sans-serif;
+}
+
+a,ul,li{
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,h2,h3,h4,p{
+  padding: 0;
+  margin: 0;
+}
+
+/* INICIO MENU MOBILE */
+.b-menu-mobile-img {
+  display: none;
+}
+
+.b-mobile-menu {
+  width: 100%;
+  top: 65px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9998;
+  background-color: #000000de;
+  /* background: transparent linear-gradient(90deg, #B41A83 0%, #CC092F 47%, #F36279 100%) 0% 0% no-repeat padding-box; */
+  margin: 0;
+  display: none;
+  transition: .3s ease;
+  height: 100vh;
+
+  @media screen and (max-width: 768px) {
+      float: right;
+      position: relative;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      top: 62px;
+      min-height: auto;
+      height: auto;
+      padding: 0;
+      width: auto;
+      background: transparent;
+      display: block;
+      transition: .3s ease;
+  }
+
+
+}
+
+@media screen and (max-width:768px) {
+  .b-mobile-menu {
+      position: absolute;
+      left: 0;
+      /* top: 65px; */
+      padding: 0;
+      display: none;
+      transition: .3s ease;
+  }
+
+  .open {
+      display: block;
+      transition: .3s ease;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.b-main-menu {
+  margin: 0;
+  padding: 0;
+
+
+}
+
+.b-open-button {
+  width: 30px;
+  height: 30px;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  position: absolute;
+  cursor: pointer;
+  border-bottom: 0;
+  top: 20px;
+  right: 24px;
+  z-index: 9999;
+  border-bottom: 0;
+  display: none;
+}
+
+@media screen and (max-width:768px) {
+  .b-open-button {
+      display: block;
+  }
+
+  .b-menu-mobile-img {
+      display: block;
+      background-color: #000;
+  }
+
+  .b-menu-mobile-img img {
+      width: 100%;
+      max-width: 117px;
+      height: 33px;
+      object-fit: cover;
+      border-radius: 10%;
+      position: absolute;
+      top: 15px;
+      left: 24px;
+  }
+}
+
+.b-open-button span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.b-open-button span:nth-child(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.b-open-button span:nth-child(2) {
+  top: 10px;
+  transform-origin: left center;
+  width: 80%;
+  margin-left: 20%;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.b-open-button span:nth-child(3) {
+  top: 20px;
+  transform-origin: left center;
+}
+
+.b-open-button.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+  transform: rotate(130deg);
+  top: -3px;
+  left: 20px;
+  width: 60%;
+  top: 0px;
+  left: 20px;
+  width: 50%;
+}
+
+.b-open-button.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.b-open-button.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 19px;
+  left: 8px;
+  transform: rotate(-130deg);
+  top: 24px;
+  left: 20px;
+  width: 60%;
+  top: 22px;
+  left: 20px;
+  width: 50%;
+}
+
+.b-scrollTop {
+  overflow-y: hidden;
+}
+
+.fundo {
+  background-color: red;
+}
+
+.b-menu-mobile .nav-item {
+  padding-left: 24px;
+  border-bottom: 1px solid #ffffff36;
+  height: 40px;
+  line-height: 40px;
+}
+
+.b-menu-mobile .nav-item a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* FIM MENU MOBILE */
+
+.containerBacco{
+  margin:0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+
+header{
+  height: 80px;
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 70px;
+  padding-right: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+}
+
+header .nav>ul{
+  display: flex;
+  align-items: center;
+  gap: 51px;
+}
+
+header>a:last-child{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color:#fff;
+  background-color: #61284B;
+  width: 100%;
+  max-width: 116px;
+  border-radius: 99px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+header>nav>ul>li>a{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+header>nav>ul>li .active{
+  color:#61284B;
+  position: relative;
+}
+
+header>nav>ul>li .active:before{
+  left: 50%;
+  content: '';
+  position: absolute;
+  bottom: -13px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #61284B;
+  transform: translateX(-50%);
+}
+
+.sectionOne{
+  display: flex;
+  justify-content: center;
+  height: 800px;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  background: url(./assets/img/sectionOne.png) no-repeat center center;
+}
+
+.sectionTwo{
+  height: 678px;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 115px;
+  gap:120px;
+}
+
+
+.sectionThree{
+  height: 500px;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  background: url(./assets/img/sectionThree.png) no-repeat center center;
+}
+
+
+
+.sectionFour{
+  height: 839px;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  background: url(./assets/img/sectionFour.png) no-repeat center center;
+  border-bottom: 5px solid #61284B;
+}
+
+.baccoServices>ul>li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+footer{
+  height: 117px;
+  background-color: #000;
+}
+
+.sectionOneData{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.sectionOneData>h1{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  color:#fff;
+}
+
+.sectionOneData>h1>span{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  color:#61284B;
+}
+
+.sectionOneData>p{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color:#fff;
+  width: 100%;
+  max-width: 637px;
+  text-align: center;
+}
+
+.sectionOneData>a{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color:#fff;
+  background-color: #61284B;
+  width: 100%;
+  max-width: 148px;
+  border-radius: 99px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 48px;
+}
+
+.sectionTwoData{
+  width: 100%;
+  max-width: 660px;
+  height: 500px;
+}
+
+.sectionTwoData>h2{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 150%;
+  color:#000;
+  margin-bottom: 29px;
+}
+
+.sectionTwoData>h2>span{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 150%;
+  color:#61284B;
+}
+.imgUva{
+  position: absolute;
+  left: 0;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+.sectionTwoData>p,
+.sectionTwoData>span{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color:#000;
+  text-align: justify;
+}
+
+.sectionTwoData>p{
+  margin-bottom: 30px;
+}
+
+.sectionTwoImg{
+  width: 100%;
+  max-width: 294px;
+}
+
+.sectionTwoImg>img{
+  width: 100%;
+}
+
+.sectionThreeData{
+  flex-direction: column;
+  align-self: center;
+  height: 100%;
+  margin-top: 157px;
+  margin-left: 50%;
+}
+
+.sectionThreeData>h3{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  color:#FFF;
+  margin:20px 0 10px 0;
+}
+
+.sectionThreeData>p{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #FFFFFF;
+  width: 100%;
+  max-width: 561px;
+}
+
+.sectionFour{
+  padding-top: 80px;
+  padding-left: 115px;
+}
+
+.sectionFourTitle{
+  margin-bottom: 80px;
+}
+
+.sectionFourTitle>h3{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 48px;
+  color: #61284B;
+  margin-top: 17px;
+}
+
+.sectionFourTitle>p{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #000000;
+  margin-top: 4px;
+}
+
+.baccoServices>ul>li{
+  margin-bottom: 80px;
+}
+
+.sectionFourTitle>p>span{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #61284B;
+  margin-top: 4px;
+}
+
+.baccoExperience>h4{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height:36px;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.baccoExperience>p{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 425;
+  font-size: 18px;
+  line-height: 150%;
+  color: #000000;
+}
+
+footer{
+  padding: 10px;
+}
+
+footer>ul{
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+footer>ul>li>a,
+footer>ul>li>p{
+  font-family: 'Filson Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+
+
+
+/* MOBILE */
+@media(max-width:768px){
+  .sectionTwo{
+    flex-direction: column;
+    height: 100%;
+    padding: 50px 10px;
+  }
+  .sectionTwoData{
+    height: 100%;
+  }
+  .sectionThree,
+  .sectionThreeData{
+    height: 100%;
+    margin:0;
+    padding: 50px 10px;
+  }
+  .sectionFour{
+    padding: 10px;
+    height: 100%;
+  }
+  footer,
+  footer>ul{
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    gap:20px;
+  }
+  header{
+    display: none;
+  }
+}
+
